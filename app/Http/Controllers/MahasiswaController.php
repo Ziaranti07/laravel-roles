@@ -29,7 +29,7 @@ class MahasiswaController extends Controller
         return view(
             'mahasiswa.index',
             [
-                'mahasiswas' => Mahasiswa::latest('NIM')->paginate(3),
+                'mahasiswa' => Mahasiswa::latest('NIM')->paginate(3),
             ]
         );
     }
@@ -50,7 +50,7 @@ class MahasiswaController extends Controller
     public function store(StoreMahasiswaRequest $request): RedirectResponse
     {
         Mahasiswa::create($request->all());
-        return redirect()->route('mahasiswas.index')->withSuccess('New mahasiswa is added successfully');
+        return redirect()->route('mahasiswa.index')->withSuccess('New mahasiswa is added successfully');
     }
 
 
@@ -102,7 +102,7 @@ class MahasiswaController extends Controller
         Mahasiswa::where('NIM', $mahasiswa->NIM)->update($validatedData);
 
 
-        return redirect()->route('mahasiswas.index')->withSuccess('Data Mahasiswa is updated successfully');
+        return redirect()->route('mahasiswa.index')->withSuccess('Data Mahasiswa is updated successfully');
     }
 
 
@@ -112,6 +112,6 @@ class MahasiswaController extends Controller
     public function destroy(Mahasiswa $mahasiswa): RedirectResponse
     {
         $mahasiswa->delete();
-        return redirect()->route('mahasiswas.index')->withSuccess('Data Mahasiswa is deleted successfully');
+        return redirect()->route('mahasiswa.index')->withSuccess('Data Mahasiswa is deleted successfully');
     }
 }

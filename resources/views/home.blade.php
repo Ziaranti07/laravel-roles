@@ -27,7 +27,7 @@
                     @endcanany
                     @canany(['create-mahasiswa', 'edit-mahasiswa',
                     'mahasiswa-product', 'show-mahasiswa'])
-                    <a class="btn btn-warning" href="{{ route('mahasiswas.index') }}">
+                    <a class="btn btn-warning" href="{{ route('mahasiswa.index') }}">
                         <i class="bi bi-person-circle"></i> Manage Mahasiswa
                     </a>
                     @endcanany

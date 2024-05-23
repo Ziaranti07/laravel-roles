@@ -4,7 +4,7 @@
     <div class="card-header">mahasiswa List</div>
     <div class="card-body">
         @can('create-mahasiswa')
-        <a href="{{ route('mahasiswas.create') }}" class="btn btn-success btn-sm my-2">
+        <a href="{{ route('mahasiswa.create') }}" class="btn btn-success btn-sm my-2">
             <i class="bi bi-plus-circle"></i> Add New mahasiswa
         </a>
         @endcan
@@ -23,7 +23,7 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse ($mahasiswas as $mahasiswa)
+                @forelse ($mahasiswa as $mahasiswa)
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $mahasiswa->NIM }}</td>
@@ -34,10 +34,10 @@
                     <td>{{ $mahasiswa->ttl }}</td>
                     <td>{{ $mahasiswa->no_hp }}</td>
                     <td>
-                        <form action="{{ route('mahasiswas.destroy', $mahasiswa->NIM) }}" method="post">
+                        <form action="{{ route('mahasiswa.destroy', $mahasiswa->NIM) }}" method="post">
                             @csrf
                             @method('DELETE')
-                            <a href="{{ route('mahasiswas.show', $mahasiswa->NIM) }}" class="btn btn-warning btn-sm">
+                            <a href="{{ route('mahasiswa.show', $mahasiswa->NIM) }}" class="btn btn-warning btn-sm">
                                 <i class="bi bi-eye"></i>
                                 Show
                             </a>
@@ -63,7 +63,7 @@
                 @endforelse
             </tbody>
         </table>
-        {{ $mahasiswas->links() }}
+        {{ $mahasiswa->links() }}
     </div>
 </div>
 @endsection

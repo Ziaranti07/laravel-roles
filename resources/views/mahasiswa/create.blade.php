@@ -8,11 +8,11 @@
                     Add New Mahasiswa
                 </div>
                 <div class="float-end">
-                    <a href="{{ route('mahasiswas.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
+                    <a href="{{ route('mahasiswa.index') }}" class="btn btn-primary btn-sm">&larr; Back</a>
                 </div>
             </div>
             <div class="card-body">
-                <form action="{{ route('mahasiswas.index') }}" method="post">
+                <form action="{{ route('mahasiswa.index') }}" method="post">
                     @csrf
                     <div class="mb-3 row">
                         <label for="NIM" class="col-md-4 col-form-label text-md-end text-start">

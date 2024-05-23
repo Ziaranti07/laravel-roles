@@ -51,7 +51,7 @@
                         <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                         @endcanany
                         @canany(['create-mahasiswa', 'edit-mahasiswa', 'delete-mahasiswa'])
-                        <li><a class="nav-link" href="{{ route('mahasiswas.index') }}">Manage
+                        <li><a class="nav-link" href="{{ route('mahasiswa.index') }}">Manage
                                 Mahasiswas</a></li>
                         @endcanany
                         <li class="nav-item dropdown">
